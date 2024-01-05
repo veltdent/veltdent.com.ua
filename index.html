@@ -33,6 +33,22 @@
 
   gtag('config', 'AW-11419029475');
 </script>
+<!-- Event snippet for Phone Clicks conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-11419029475/iGsMCLWt5oUZEOOfgsUq',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>  
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
